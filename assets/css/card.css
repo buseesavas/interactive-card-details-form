@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap");
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-family: "Space Grotesk";
+  height: 100%;
+  margin: 0;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.card-container {
+  background: #21092f;
+  height: 240px;
+  padding-inline: 16px;
+}
+
+.cards {
+  position: relative;
+}
+
+.card-back {
+  background: linear-gradient(168.73deg, #ffffff 5%, #d2d3d9 91.69%);
+  width: 286px;
+  height: 157px;
+  border-radius: 6px;
+  padding-top: 14.74px;
+  position: relative;
+  top: 32px;
+  float: right;
+}
+
+.black-line {
+  background: #2f2f2f;
+  width: 100%;
+  height: 34.6px;
+}
+
+.cvc-box {
+  background: #adb5be;
+  border-radius: 4px;
+  width: 230.98px;
+  margin-inline: auto;
+  margin-top: 15.38px;
+  height: 29.74px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  color: white;
+  padding-inline: 10.79px;
+  padding-block: 9px;
+}
+
+.card-front {
+  background-image: url("../images/card-front.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  width: 285px;
+  padding: 20.6px 19px;
+  position: absolute;
+  top: 126px;
+}
+
+.invalid-input {
+  border: 1px solid red;
+}
+
+.card-name-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.circle-couple {
+  width: 54px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.big-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.small-circle {
+  width: 13.5px;
+  height: 13.5px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  align-self: center;
+}
+
+.numberText {
+  margin-top: 37px;
+  margin-bottom: 17px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22.97px;
+  letter-spacing: 2.200000047683716px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.nameText,
+.dateText {
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 11.48px;
+  letter-spacing: 1.2857142686843872px;
+  color: #fff;
+}
+
+.inputBoxes {
+  margin-top: 91px;
+  margin-inline: auto;
+}
+
+.inputBoxes p {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15.31px;
+  letter-spacing: 2px;
+  text-align: left;
+  color: #21092f;
+}
+
+.nameInput,
+.numberInput,
+.dateMonthInput,
+.dateYearInput,
+.cvcInput {
+  border: 1px solid #dfdee0;
+  border-radius: 8px;
+  margin-top: 8px;
+  padding: 11px 16px;
+  display: flex;
+  width: 100%;
+}
+
+.nameInput::placeholder,
+.numberInput::placeholder,
+.dateMonthInput::placeholder,
+.dateYearInput::placeholder,
+.cvcInput::placeholder {
+  color: #21092f;
+  opacity: 25%;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22.97px;
+  text-align: left;
+}
+
+.inputBoxes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-inline: 24px;
+}
+
+.monthYearInputs {
+  display: flex;
+}
+
+.cardDateCvc {
+  display: flex;
+  flex-direction: row;
+  gap: 11px;
+}
+
+.dateMonthInput,
+.dateYearInput {
+  width: 72px;
+}
+
+.cvcInput {
+  width: 164px;
+}
+
+.monthYearInputs {
+  gap: 8px;
+}
+
+.confirmBtn {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22.97px;
+  text-align: left;
+  color: #ffffff;
+  background-color: #21092f;
+  padding-block: 15px;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+  margin-top: 8px;
+}
+
+@media (width >= 768px) {
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+
+  .card-container {
+    height: 100%;
+    width: 400px;
+  }
+
+  .inputBoxes {
+    margin: 0px;
+    margin-inline: auto;
+    align-self: center;
+  }
+
+  .card-front {
+    top: 187px;
+  }
+
+  .card-back {
+    top: 370px;
+    right: 0px;
+  }
+}
+
+@media (width >= 1110px) {
+  .card-front {
+    top: 187px;
+    right: -100px;
+  }
+
+  .card-back {
+    top: 370px;
+    right: -200px;
+  }
+
+  .card-front {
+    width: 447px;
+    padding: 20.6px 19px;
+    position: absolute;
+    top: 126px;
+  }
+}
